@@ -144,6 +144,138 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-“一些细节”" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/12/11/%E2%80%9C%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82%E2%80%9D/">“一些细节”</a>
+    </h1>
+  
+
+        
+        <a href="/2022/12/11/%E2%80%9C%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82%E2%80%9D/" class="archive-article-date">
+  	<time datetime="2022-12-11T02:28:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##结构体自动对齐<br>[里面具体分析那个结构时第一个讲的char不一定对，得看结构体后面其他变量的类型]（<a target="_blank" rel="noopener" href="https://blog.csdn.net/yuzhihui_no1/article/details/38468285%EF%BC%89">https://blog.csdn.net/yuzhihui_no1/article/details/38468285）</a><br>总之：结构体占的空间总为4的倍数，不够的会补齐  </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/12/11/%E2%80%9C%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82%E2%80%9D/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-函数指针" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/12/06/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/">函数指针</a>
+    </h1>
+  
+
+        
+        <a href="/2022/12/06/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/" class="archive-article-date">
+  	<time datetime="2022-12-06T07:11:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#函数指针<br>##概念界定<br>首先，函数是存在在代码段中的，并且在每个函数的代码段中，都有一个入口地址。<br>每次正常调用函数时，调用代码段的函数代码在栈区开辟空间进行函数的活动（应该是吧？）。<br>而函数指针是指向代码段中的入口地址，而不是对应栈区中一个具体的函数活动<br>##格式<br>eg:int max(int a,int b);<br>int main()<br>{<br>    int (<em>p)(int ,int);&#x2F;&#x2F;函数指针的定义<br>     &#x2F;&#x2F;int （</em>p)(int a,int b)另一种定义方式 </p>
+<pre><code> p=max;//函数指针的初始化，使其指向入口地址 
+
+ int ret= (*p)(10,15);//函数指针的调用，*号可去掉，就是在栈区进行了具体的函数活动 
+ return  0;
+</code></pre>
+<p>}<br>##应用<br>###减小工作量<br>一个比较大的工程中，面对不同的情况可能会选择不同的排序算法，如果全部采用函数指针的方式，<br>只需在初始化时根据情况的不同赋以不同的入口地址<br>###回调函数<br>函数指针是一个值，因此可以作为函数的参数，使该函数（A)能通过调用时的不同的函数参数，来在<br>该函数（A）体内调用不同的函数</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/12/06/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
