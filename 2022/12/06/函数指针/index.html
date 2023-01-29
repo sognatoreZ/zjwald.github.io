@@ -16,7 +16,7 @@
 <meta property="og:description" content="函数指针概念界定首先，函数是存在在代码段中的，并且在每个函数的代码段中，都有一个入口地址。每次正常调用函数时，调用代码段的函数代码在栈区开辟空间进行函数的活动（应该是吧？）。而函数指针是指向代码段中的入口地址，而不是对应栈区中一个具体的函数活动##格式eg:int max(int a,int b);int main(){    int (*p)(int ,int);&#x2F;&#x2F;函数指针">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-06T07:11:26.000Z">
-<meta property="article:modified_time" content="2023-01-13T09:53:02.604Z">
+<meta property="article:modified_time" content="2023-01-13T11:44:01.698Z">
 <meta property="article:author" content="Zjwald">
 <meta name="twitter:card" content="summary">
   
@@ -174,7 +174,7 @@
 </code></pre>
 <p>}</p>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="减小工作量"><a href="#减小工作量" class="headerlink" title="减小工作量"></a>减小工作量</h3><p>一个比较大的工程中，面对不同的情况可能会选择不同的排序算法，如果全部采用函数指针的方式，<br>只需在初始化时根据情况的不同赋以不同的入口地址<br>    而且，相同类型的函数指针可以直接用数组装<br>    eg:int  (*p[])(int,int )&#x3D;{f,g,h};</p>
-<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>函数指针是一个值，因此可以作为函数的参数，使该函数（A)能通过调用时的不同的函数参数，来在<br>该函数（A）体内调用不同的函数<br>    eg:void A(int (<em>f)(int ,int))<br>    {<br>        printf(“%d”,(</em>)f(2,3));<br>    }</p>
+<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>函数指针是一个值，因此可以作为函数的参数，使该函数（A)能通过调用时的不同的函数参数，来在<br>该函数（A）体内调用不同的函数<br>    eg:void A(int (<em>f)(int ,int))<br>    {<br>        printf(“%d”,(</em>)f(2,3));<br>    }<br>    &#x2F;&#x2F;常用于交互性软件的制作</p>
 
       
 

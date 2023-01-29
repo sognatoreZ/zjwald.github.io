@@ -307,7 +307,8 @@ height: 100% left: 0 top: 0";> </div></iframe>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##结构体自动对齐<br>[里面具体分析那个结构时第一个讲的char不一定对，得看结构体后面其他变量的类型]（<a target="_blank" rel="noopener" href="https://blog.csdn.net/yuzhihui_no1/article/details/38468285%EF%BC%89">https://blog.csdn.net/yuzhihui_no1/article/details/38468285）</a><br>总之：结构体占的空间总为4的倍数，不够的会补齐  </p>
+        <h2 id="结构体自动对齐"><a href="#结构体自动对齐" class="headerlink" title="结构体自动对齐"></a>结构体自动对齐</h2><p>[里面具体分析那个结构时第一个讲的char不一定对，得看结构体后面其他变量的类型]（<a target="_blank" rel="noopener" href="https://blog.csdn.net/yuzhihui_no1/article/details/38468285%EF%BC%89">https://blog.csdn.net/yuzhihui_no1/article/details/38468285）</a><br>总之：结构体占的空间总为4的倍数，不够的会补齐  </p>
+<h2 id="windows消息循环loop"><a href="#windows消息循环loop" class="headerlink" title="windows消息循环loop"></a>windows消息循环loop</h2><p>  …..待补充</p>
 
       
 
@@ -378,7 +379,7 @@ height: 100% left: 0 top: 0";> </div></iframe>
 </code></pre>
 <p>}</p>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="减小工作量"><a href="#减小工作量" class="headerlink" title="减小工作量"></a>减小工作量</h3><p>一个比较大的工程中，面对不同的情况可能会选择不同的排序算法，如果全部采用函数指针的方式，<br>只需在初始化时根据情况的不同赋以不同的入口地址<br>    而且，相同类型的函数指针可以直接用数组装<br>    eg:int  (*p[])(int,int )&#x3D;{f,g,h};</p>
-<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>函数指针是一个值，因此可以作为函数的参数，使该函数（A)能通过调用时的不同的函数参数，来在<br>该函数（A）体内调用不同的函数<br>    eg:void A(int (<em>f)(int ,int))<br>    {<br>        printf(“%d”,(</em>)f(2,3));<br>    }</p>
+<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>函数指针是一个值，因此可以作为函数的参数，使该函数（A)能通过调用时的不同的函数参数，来在<br>该函数（A）体内调用不同的函数<br>    eg:void A(int (<em>f)(int ,int))<br>    {<br>        printf(“%d”,(</em>)f(2,3));<br>    }<br>    &#x2F;&#x2F;常用于交互性软件的制作</p>
 
       
 
